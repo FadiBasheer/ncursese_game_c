@@ -7,6 +7,9 @@ set(CMAKE_C_FLAGS "-lncurses")
 find_package(Curses REQUIRED)
 include_directories(${CURSES_INCLUDE_DIR})
 
-add_executable(ncursese_game_c
-        main.c)
-target_link_libraries(ncursese_game_c ${CURSES_LIBRARIES})
+add_executable(main main.c)
+add_executable(client client.c)
+add_executable(server server.c)
+
+target_link_libraries(client ${CURSES_LIBRARIES})
+target_link_libraries(server ${CURSES_LIBRARIES})
