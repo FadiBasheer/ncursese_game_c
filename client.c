@@ -73,13 +73,11 @@ int main() {
     int fd;
     struct js_event jse;
 
-    fd = open_joystick("/dev/input/js1");
+    fd = open_joystick("/dev/input/js0");
 
     //////////////////////////////////////////////////////////////////////
     WINDOW *win;
     int X = 1, Y = 1;
-    int choice = 0;
-    int c;
 
     int sockfd;
     struct sockaddr_in servaddr;

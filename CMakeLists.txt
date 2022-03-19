@@ -9,7 +9,11 @@ include_directories(${CURSES_INCLUDE_DIR})
 
 add_executable(main main.c)
 add_executable(client client.c)
-add_executable(server server.c)
+add_executable(test test.c)
 
 target_link_libraries(client ${CURSES_LIBRARIES})
-target_link_libraries(server ${CURSES_LIBRARIES})
+target_link_libraries(main ${CURSES_LIBRARIES})
+
+target_link_libraries(test ${CURSES_LIBRARIES})
+
+TARGET_LINK_LIBRARIES(test pthread)
